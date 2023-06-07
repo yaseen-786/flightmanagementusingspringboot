@@ -67,9 +67,9 @@ public class FlightService {
 		flightrepo.delete(flightrepo.findByFlightid(id));
 	}
 
-	public List<Flight> getflights(String source, String destination) {
+	public List<Flight> getflights(String source, String destination,String date) {
 		// TODO Auto-generated method stub
-		return flightrepo.findBySourceAndDestination(source, destination);
+		return flightrepo.findBySourceAndDestinationAndDate(source, destination,date);
 	}
 
 }

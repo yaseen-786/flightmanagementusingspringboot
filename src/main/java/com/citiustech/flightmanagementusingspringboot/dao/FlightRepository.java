@@ -15,7 +15,7 @@ import jakarta.transaction.Transactional;
 public interface FlightRepository extends JpaRepository<Flight, Integer> {
 	public Flight findByName(int flightid);
 	public Flight findByFlightid(int id);
-	public List<Flight> findBySourceAndDestination(String source,String destination);
+	public List<Flight> findBySourceAndDestinationAndDate(String source,String destination,String date);
 	@Query("SELECT f.source FROM Flight f")
 	public List<String> getAllSource();
 	

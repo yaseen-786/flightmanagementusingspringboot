@@ -18,6 +18,14 @@ public class Booking {
 	@OneToOne
 	private Flight flight;
 	private Integer noofticket;
+	private String orderid;
+	private String status;
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public Integer getNoofticket() {
 		return noofticket;
 	}
@@ -30,7 +38,7 @@ public class Booking {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Booking(Integer bookid, Customer cust, Flight flight, Float amount, Integer seatno,Integer noofticket) {
+	public Booking(Integer bookid, Customer cust, Flight flight, Float amount, Integer seatno,Integer noofticket,String orderid,String status) {
 		super();
 		this.bookid = bookid;
 		this.cust = cust;
@@ -38,6 +46,14 @@ public class Booking {
 		this.amount = amount;
 		this.seatno = seatno;
 		this.noofticket = noofticket;
+		this.orderid = orderid;
+		this.status = status;
+	}
+	public String getOrderid() {
+		return orderid;
+	}
+	public void setOrderid(String orderid) {
+		this.orderid = orderid;
 	}
 	public Integer getBookid() {
 		return bookid;
@@ -71,9 +87,10 @@ public class Booking {
 	}
 	@Override
 	public String toString() {
-		return "Booking [bookid=" + bookid + ", cust=" + cust + ", flight=" + flight + ", amount=" + amount
-				+ ", seatno=" + seatno + " , noofticket=" + noofticket +"]";
+		return "Booking [bookid=" + bookid + ", cust=" + cust + ", flight=" + flight + ", noofticket=" + noofticket
+				+ ", orderid=" + orderid + ", amount=" + amount + ", seatno=" + seatno + ", status=" + status+"]";
 	}
+	
 	
 	
 }

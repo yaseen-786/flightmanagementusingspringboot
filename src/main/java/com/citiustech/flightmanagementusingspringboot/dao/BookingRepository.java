@@ -10,6 +10,6 @@ public interface BookingRepository extends JpaRepository<Booking, Integer> {
 	
 	
 	public Booking findByBookid(int id);
-
+	public Booking findByOrderid(String orderid);
 
 }

@@ -49,9 +49,10 @@ public class FlightController {
 		return flightservice.getDestination();
 	}
 	
-	@GetMapping("/getdetails/{source}/{destination}")
-	public List<Flight> getDetails(@PathVariable("source") String source,@PathVariable("destination") String destination){
-		return flightservice.getflights(source,destination);
+	@GetMapping("/getdetails/{source}/{destination}/{date}")
+	public List<Flight> getDetails(@PathVariable("source") String source,@PathVariable("destination") String destination,@PathVariable("date") String date){
+		System.out.println(date);
+		return flightservice.getflights(source,destination,date);
 	}
 	
 	@PutMapping("/flightupdate/{flightid}")
